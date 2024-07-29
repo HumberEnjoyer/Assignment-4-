@@ -1,0 +1,379 @@
+/*--variables--*/
+:root {
+    --white-color: #ffffff;
+    --primary-color: hsla(82.5, 100%, 74.9%, 1);
+    --section-bg-color: rgb(220, 220, 220);
+    ;
+    --dark-color: rgb(8, 31, 52);
+    --secondary-color: #717275;
+
+    --body-font-family: "Space Mono", monospace;
+
+    --h1-font-size: 74px;
+    --h2-font-size: 46px;
+    --h3-font-size: 32px;
+    --h4-font-size: 28px;
+    --h5-font-size: 24px;
+    --h6-font-size: 22px;
+    --p-font-size: 18px;
+    --btn-font-size: 14px;
+    --text-xl: 200%;
+
+    --border-radius-medium: 20px;
+
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+}
+
+body {
+    background-color: var(--white-color);
+    font-family: var(--body-font-family);
+}
+
+/*-- typography--*/
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--dark-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--font-weight-bold);
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+}
+
+h4 {
+    font-size: var(--h4-font-size);
+}
+
+h5 {
+    font-size: var(--h5-font-size);
+}
+
+h6 {
+    font-size: var(--h6-font-size);
+}
+
+p {
+    color: var(--secondary-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-light);
+}
+
+
+a,
+button {
+    touch-action: manipulation;
+    transition: all 0.3s;
+}
+
+a {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+b,
+strong {
+    font-weight: var(--font-weight-bold);
+}
+
+
+.text-xl {
+    font-size: 8rem;
+}
+
+.text-color {
+    color: var(--primary-color);
+}
+
+.rad-med {
+    border-radius: var(--border-radius-medium);
+}
+
+/*-- section--*/
+.section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-overlay {
+    background-color: var(--dark-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0.35;
+}
+
+.section-overlay+.container {
+    position: relative;
+}
+
+/*-- navbar--*/
+
+.navbar {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+
+}
+
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--primary-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-normal);
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    filter: invert(0.4);
+}
+
+.navbar-toggler {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    margin: 0;
+
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(204, 255, 51, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+
+/*-- hero--*/
+
+.hero-section {
+    background: url('header-bg.jpg') center center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+    height: 90vh;
+    border-bottom: var(--primary-color);
+    border-bottom-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.hero-section-spaceship {
+    background: url('spaceship.jpg') center center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+    height: 90vh;
+    border-bottom: var(--primary-color);
+    border-bottom-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+
+/*-- about--*/
+.about-section {
+    background-image: url('space.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.about-section-spaceship {
+    background-color: var(--dark-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.about-text-info {
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: var(--border-radius-medium);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 20px;
+    padding: 35px;
+}
+
+.earth-container {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.earth-image {
+    transition: transform 0.1s ease-out;
+}
+
+
+/*-- schedule--*/
+.schedule-section {
+    background-color: var(--dark-color);
+}
+
+.schedule-table {
+    border-radius: var(--border-radius-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+.schedule-table thead th {
+    background-color: transparent;
+}
+
+.schedule-table th,
+.schedule-table tr,
+.schedule-table td {
+    border-bottom-color: transparent;
+    padding: 30px;
+}
+
+.schedule-table tr:last-child th,
+.schedule-table tr:last-child td {
+    border-bottom-color: transparent;
+}
+
+.schedule-table thead th {
+    border-right: 1px solid var(--secondary-color);
+    border-bottom-color: transparent;
+}
+
+.schedule-table th+td {
+    border-bottom: 0;
+}
+
+.schedule-table thead th:last-child {
+    border-right-color: transparent;
+}
+
+.schedule-table .Chilling-background-image {
+    background-image: url('https://images.unsplash.com/photo-1499532744860-fb7526b66e7b?q=80&w=2744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.schedule-table .flight-background-image {
+    background-image: url('https://images.unsplash.com/photo-1687985826611-80b714011d0b?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.schedule-table .boys-background-image {
+    background-image: url('https://media.istockphoto.com/id/527138615/photo/the-mothership-has-arrive.webp?b=1&s=170667a&w=0&k=20&c=ZsJxgprjU5KiPDZjNRyHN5KxOUlsh6KNzqGFpIWugbI=');
+}
+
+.schedule-table .probing-background-image {
+    background-image: url('https://media.istockphoto.com/id/527138615/photo/the-mothership-has-arrive.webp?b=1&s=170667a&w=0&k=20&c=ZsJxgprjU5KiPDZjNRyHN5KxOUlsh6KNzqGFpIWugbI=');
+}
+
+.schedule-table .vaca-background-image {
+    background-image: url('https://media.istockphoto.com/id/1479510452/photo/one-man-with-alien-mask-eating-alone-inside-a-fast-food-store-bad-food-hamburger-and-french.jpg?s=612x612&w=0&k=20&c=MQkSzu6zXYAG7l6NvMOmu1qFaVtqKQzMV5DSyMRLFlw=');
+}
+
+.table-background-image-wrap {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: none;
+    position: relative;
+}
+
+.schedule-table h3,
+.schedule-table p {
+    color: var(--primary-color);
+    position: relative;
+    z-index: 2;
+}
+
+/* moving text */
+.moving-text-section {
+    background-color: transparent;
+    padding: 10px 0;
+    overflow: hidden;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    position: relative;
+    border-color: var(--primary-color);
+}
+
+.moving-text {
+    display: flex;
+    white-space: nowrap;
+    animation: moveLeft 20s linear infinite;
+}
+
+.moving-content {
+    display: flex;
+    white-space: nowrap;
+}
+
+.moving-item {
+    display: inline-block;
+    margin: 0 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* footer */
+.footer {
+    background: url(space.jpg) center center no-repeat;
+    background-size: cover;
+    mix-blend-mode: normal;
+    text-align: center;
+}
+
+.overlay {
+    background: url(background.png)
+}
