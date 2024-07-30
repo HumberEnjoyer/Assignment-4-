@@ -19,3 +19,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
         earthImage.style.transform = 'translate(0, 0)';
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeUpElements = document.querySelectorAll('.fade-up');
+
+    //fade up part
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    fadeUpElements.forEach(element => {
+        observer.observe(element);
+    });
+});

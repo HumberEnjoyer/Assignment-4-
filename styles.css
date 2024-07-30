@@ -1,13 +1,9 @@
-/*--variables--*/
+/*--------------------
+        variables
+-------------------*/
 :root {
     --white-color: #ffffff;
     --primary-color: hsla(82.5, 100%, 74.9%, 1);
-    --section-bg-color: rgb(220, 220, 220);
-
-    --primary: #1363C6;
-    --secondary: #15ACE1;
-    --light: #F4F7FE;
-    --dark: #14183E;
 
     --dark-color: rgb(8, 31, 52);
     --secondary-color: #717275;
@@ -22,7 +18,7 @@
     --h6-font-size: 22px;
     --p-font-size: 18px;
     --btn-font-size: 14px;
-    --text-xl: 200%;
+    --text-xl: 200px;
 
     --border-radius-medium: 20px;
 
@@ -36,7 +32,9 @@ body {
     font-family: var(--body-font-family);
 }
 
-/*-- typography--*/
+/*------------------------ 
+        typography
+------------------------*/
 
 h2,
 h3,
@@ -105,7 +103,7 @@ strong {
 
 
 .text-xl {
-    font-size: 8rem;
+    font-size: var(--text-xl);
 }
 
 .text-color {
@@ -116,7 +114,9 @@ strong {
     border-radius: var(--border-radius-medium);
 }
 
-/*-- sections--*/
+/*------------------------
+        sections
+------------------------*/
 .section-padding {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -137,7 +137,9 @@ strong {
     position: relative;
 }
 
-/*-- navbar--*/
+/*-- -----------
+    navbar
+-------------*/
 
 .navbar {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
@@ -177,26 +179,24 @@ strong {
 }
 
 .navbar-toggler-icon {
+    /*** did you know theres a tool to encode svg links into css??? ***/
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(204, 255, 51, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 
 
-/*-- hero--*/
+/*----------------------
+        hero
+------------------------*/
 
 .hero-section {
     background: url('header-bg.jpg') center center/cover no-repeat;
-    position: relative;
-    overflow: hidden;
-    padding-top: 100px;
-    height: 90vh;
+    height: 90vw;
+    max-height: 90vh;
     border-bottom: var(--primary-color);
     border-bottom-style: solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     color: var(--primary-color);
+    padding-top: 100px;
 }
 
 .hero-section-spaceship {
@@ -214,8 +214,18 @@ strong {
     color: var(--primary-color);
 }
 
+.top-text {
+    top: 0;
+}
 
-/*-- about--*/
+.bottom-text {
+    margin-top: 15vw;
+}
+
+
+/*------------------------
+        about
+------------------------*/
 .about-section {
     background-image: url('space.jpg');
     background-repeat: no-repeat;
@@ -245,11 +255,9 @@ strong {
 }
 
 .earth-container {
-    perspective: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
 }
 
 .earth-image {
@@ -268,9 +276,6 @@ strong {
     overflow: hidden;
 }
 
-.schedule-table thead th {
-    background-color: transparent;
-}
 
 .schedule-table th,
 .schedule-table tr,
@@ -296,7 +301,7 @@ strong {
 .schedule-table thead th:last-child {
     border-right-color: transparent;
 }
-
+/*** all the images  ***/
 .schedule-table .Chilling-background-image {
     background-image: url('https://images.unsplash.com/photo-1499532744860-fb7526b66e7b?q=80&w=2744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
@@ -371,7 +376,9 @@ strong {
     }
 }
 
-/*** FAQs ***/
+/****************** 
+        FAQs 
+******************/
 .faq-section {
     background-image: url(spacecut.jpg);
     background-repeat: no-repeat;
@@ -379,7 +386,7 @@ strong {
     position: relative;
 
 }
-
+/*** pain ITA vars ***/
 .accordion {
     --bs-accordion-active-bg: none;
     --bs-accordion-color: var(--primary-color);
@@ -389,12 +396,12 @@ strong {
     --bs-accordion-border-width: 0px;
     --bs-accordion-bg: transparent;
 }
-
+/*** getting rid of focus outline ***/
 .accordion-button:focus {
     box-shadow: none;
     border-color: rgba(0, 0, 0, .125);
 }
-
+/*** custum buttons ***/
 .accordion-button::after {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='hsla(82.5, 100%25, 74.9%25, 1)' class='bi bi-plus-lg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2'/%3E%3C/svg%3E");
     transition: all 0.5s;
@@ -416,15 +423,66 @@ strong {
     background: url(background.png)
 }
 
+/*boxes fade*/
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Media queries */
 
+@media (max-width: 1470px) {
+    .text-xl {
+        font-size: 14vw;
+    }
+    .bottom-text {
+        margin-top: 19vw;
+    }
+}
+@media (max-width: 977px) {
+    .text-xl {
+        font-size: 20vw;
+    }
+    .bottom-text {
+        margin-top: 2vw;
+    }
+}
 
 @media (max-width: 768px) {
     .hero-section {
-        height: 100vh;
+        height: 160vw;
     }
-
     .text-xl {
-        font-size: 24vw;
+        font-size: 32vw;
     }
 }
+@media (max-width: 583px) {
+    .hero-section {
+        height: 180vw;
+    }
+}
+
+@media (max-width: 425px) {
+    .text-xl {
+        font-size: 32vw;
+    }
+}
+
