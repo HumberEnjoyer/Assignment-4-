@@ -3,7 +3,12 @@
     --white-color: #ffffff;
     --primary-color: hsla(82.5, 100%, 74.9%, 1);
     --section-bg-color: rgb(220, 220, 220);
-    ;
+
+    --primary: #1363C6;
+    --secondary: #15ACE1;
+    --light: #F4F7FE;
+    --dark: #14183E;
+
     --dark-color: rgb(8, 31, 52);
     --secondary-color: #717275;
 
@@ -366,6 +371,39 @@ strong {
     }
 }
 
+/*** FAQs ***/
+.faq-section {
+    background-image: url(spacecut.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+
+.accordion {
+    --bs-accordion-active-bg: none;
+    --bs-accordion-color: var(--primary-color);
+    --bs-accordion-btn-color: var(--primary-color);
+    --bs-accordion-active-color: var(--primary-color);
+    --bs-accordion-btn-focus-border-color: var(--primary-color);
+    --bs-accordion-border-width: 0px;
+    --bs-accordion-bg: transparent;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, .125);
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='hsla(82.5, 100%25, 74.9%25, 1)' class='bi bi-plus-lg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2'/%3E%3C/svg%3E");
+    transition: all 0.5s;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='hsla(82.5, 100%25, 74.9%25, 1)' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8'/%3E%3C/svg%3E");
+}
+
 /* footer */
 .footer {
     background: url(space.jpg) center center no-repeat;
@@ -376,4 +414,17 @@ strong {
 
 .overlay {
     background: url(background.png)
+}
+
+/* Media queries */
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 100vh;
+    }
+
+    .text-xl {
+        font-size: 24vw;
+    }
 }
