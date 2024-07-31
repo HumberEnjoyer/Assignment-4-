@@ -15,7 +15,7 @@
     --h3-font-size: 32px;
     --h4-font-size: 28px;
     --h5-font-size: 24px;
-    --h6-font-size: 22px;
+    --h6-font-size: 18px;
     --p-font-size: 18px;
     --btn-font-size: 14px;
     --text-xl: 200px;
@@ -28,7 +28,7 @@
 }
 
 body {
-    background-color: var(--white-color);
+    background-color: var(--dark-color);
     font-family: var(--body-font-family);
 }
 
@@ -41,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--dark-color);
+    color: var(--primary-color);
 }
 
 h1,
@@ -192,13 +192,12 @@ strong {
 }
 
 
-
 /*----------------------
         hero
 ------------------------*/
 
 .hero-section {
-    background: url('header-bg.jpg') center center/cover no-repeat;
+    background: url('pics/header-bg.jpg') center center/cover no-repeat;
     height: 90vw;
     max-height: 90vh;
     border-bottom: var(--primary-color);
@@ -208,7 +207,22 @@ strong {
 }
 
 .hero-section-spaceship {
-    background: url('spaceship.jpg') center center/cover no-repeat;
+    background: url('pics/spaceship.jpg') center center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+    height: 90vh;
+    border-bottom: var(--primary-color);
+    border-bottom-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.hero-section-coverings {
+    background: url('pics/Bodily-Coverings.jpg') center center/cover no-repeat;
     position: relative;
     overflow: hidden;
     padding-top: 100px;
@@ -235,7 +249,7 @@ strong {
         about
 ------------------------*/
 .about-section {
-    background-image: url('space.jpg');
+    background-image: url('pics/space.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -271,6 +285,7 @@ strong {
 .earth-image {
     transition: transform 0.1s ease-out;
 }
+
 /*------------------------
         button
 ------------------------*/
@@ -286,26 +301,31 @@ strong {
 
 @keyframes rotate-ship {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     25% {
-      transform: rotate(-15deg);
+        transform: rotate(-15deg);
     }
+
     50% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     75% {
-      transform: rotate(15deg);
+        transform: rotate(15deg);
     }
+
     100% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-  }
-  
-  /* Apply the animation on hover */
-  .btn-btt:hover img {
+}
+
+/* Apply the animation on hover */
+.btn-btt:hover img {
     animation: rotate-ship 1s infinite;
-  }
+}
+
 /*--------------
     schedule
  ----------------*/
@@ -344,6 +364,7 @@ strong {
 .schedule-table thead th:last-child {
     border-right-color: transparent;
 }
+
 /*** all the images  ***/
 .schedule-table .Chilling-background-image {
     background-image: url('https://images.unsplash.com/photo-1499532744860-fb7526b66e7b?q=80&w=2744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
@@ -380,7 +401,119 @@ strong {
     z-index: 2;
 }
 
-/* moving text */
+/*----------------------
+        products
+ ------------------------*/
+
+.product-section {
+    background-color: var(--dark-color);
+    z-index: 1;
+
+}
+
+.product-section .product-item {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    padding-bottom: 100px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.product-section .product-item .product-thumbnail {
+    margin-bottom: 30px;
+    position: relative;
+    top: 0;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+.product-section .product-item .buy-icon {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    background: #2f2f2fb0;
+    bottom: 15px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-bottom: -17.5px;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    z-index: 3;
+}
+
+.product-section .product-item .buy-icon img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.product-section .product-item:before {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    content: "";
+    background: #ceff7f4d;
+    height: 0%;
+    z-index: 0;
+    border-radius: 10px;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+.product-section .product-item:hover .product-thumbnail {
+    top: -25px;
+}
+
+.product-section .product-item:hover .buy-icon {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-section .product-item:hover:before {
+    height: 70%;
+}
+
+/*----------------------
+        product top
+ ------------------------*/
+
+.service-icon {
+    border-radius: 10px;
+    flex: 0 0 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #3b5d50;
+    margin-right: 20px;
+    color: #ffffff;
+}
+.product-line {
+        border-bottom: 1px solid;
+        border-color: #ceff7fa1;
+        bottom: 0;
+        left: 0;
+        padding-bottom: 40px;
+        width: 100%;
+}
+/*------------------------
+         moving text 
+------------------------*/
 .moving-text-section {
     background-color: transparent;
     padding: 10px 0;
@@ -421,14 +554,15 @@ strong {
 
 /****************** 
         FAQs 
-******************/
+**********************/
 .faq-section {
-    background-image: url(spacecut.jpg);
+    background-image: url(pics/spacecut.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 
 }
+
 /*** pain ITA vars ***/
 .accordion {
     --bs-accordion-active-bg: none;
@@ -439,11 +573,13 @@ strong {
     --bs-accordion-border-width: 0px;
     --bs-accordion-bg: transparent;
 }
+
 /*** getting rid of focus outline ***/
 .accordion-button:focus {
     box-shadow: none;
     border-color: rgba(0, 0, 0, .125);
 }
+
 /*** custum buttons ***/
 .accordion-button::after {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='hsla(82.5, 100%25, 74.9%25, 1)' class='bi bi-plus-lg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2'/%3E%3C/svg%3E");
@@ -454,16 +590,18 @@ strong {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='hsla(82.5, 100%25, 74.9%25, 1)' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8'/%3E%3C/svg%3E");
 }
 
-/* footer */
+/****************** 
+        footer 
+**********************/
 .footer {
-    background: url(space.jpg) center center no-repeat;
+    background: url(pics/Footer_bg.png) center center no-repeat;
     background-size: cover;
     mix-blend-mode: normal;
     text-align: center;
 }
 
 .overlay {
-    background: url(background.png)
+    background: url(pics/background.png)
 }
 
 /*boxes fade*/
@@ -490,25 +628,31 @@ strong {
     transform: translateY(0);
 }
 
-/* Media queries */
+/*************************** 
+        Media queries 
+****************************/
 @media (min-width: 1500px) and (max-width: 2600px) {
     .hero-section {
         min-height: 1000px;
     }
 }
+
 @media (max-width: 1470px) {
     .text-xl {
         font-size: 14vw;
     }
+
     .bottom-text {
         margin-top: 19vw;
     }
 
 }
+
 @media (max-width: 977px) {
     .text-xl {
         font-size: 20vw;
     }
+
     .bottom-text {
         margin-top: 2vw;
     }
@@ -518,10 +662,12 @@ strong {
     .hero-section {
         height: 160vw;
     }
+
     .text-xl {
         font-size: 32vw;
     }
 }
+
 @media (max-width: 583px) {
     .hero-section {
         height: 180vw;
@@ -533,4 +679,3 @@ strong {
         font-size: 32vw;
     }
 }
-

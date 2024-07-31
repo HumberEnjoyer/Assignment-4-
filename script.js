@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Select the element 
     const earthImage = document.querySelector('.earth-image');
 
-    //mouse listener
+    // Mouse listener
     earthImage.addEventListener('mousemove', (e) => {
         const { left, top, width, height } = earthImage.getBoundingClientRect();
         // Calculate the X and Y position of the mouse
