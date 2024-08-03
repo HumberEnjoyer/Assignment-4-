@@ -33,15 +33,15 @@
             <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav ms-auto position-absolute top-50 start-50 translate-middle">
                     <li class="nav-item">
-                        <a class="nav-link" href="spacecraft.html">Visit Spacecraft</a>
+                        <a class="nav-link text-sm" href="spacecraft.html">Visit Spacecraft</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="bodily-coverings.html">Bodily Coverings</a>
+                        <a class="nav-link text-sm" href="bodily-coverings.html">Bodily Coverings</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cart (0)</a>
+                        <a class="nav-link text-sm" href="cart.html">Cart (0)</a>
                     </li>
                 </ul>
             </div>
@@ -49,52 +49,60 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section-coverings">
-        <div class=" d-flex align-items-end justify-content-around align-self-end m-5">
-            <div class="text-start  ">
-                <h1 class="">BODILY</h1>
-                <h1 class="">COVERINGS</h1>
-            </div>
-
-            <div class="col-md-6 col-lg-3 text-start">
-                <p class="text-color">From our research, we understand that you express yourselves through your
-                    coverings. We hope you will express your excitement around our arrival with this collection.</p>
+    <section class="hero-section-coverings align-items-end">
+        <div class="container ">
+            <div class="row gy-5 justify-content-between align-items-end pb-5">
+                <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0 ">
+                    <h1 class="text-start">BODILY</h1>
+                    <h1 class="text-start">COVERINGS</h1>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0 ">
+                    <p class="text-color text-start">From our research, we understand that you express yourselves
+                        through
+                        your
+                        coverings. We hope you will express your excitement around our arrival with this
+                        collection.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- d-flex align-items-end justify-content-around align-self-end m-5 -->
+    <!-- filter section -->
     <section class="section-padding fade-up">
         <div class="container pt-5 product-line">
             <div class="row justify-content-center">
                 <div class="col-lg-3">
                     <div class="align-items-center d-flex justify-content-center">
-                        <div class="service-icon mb-4">
+                        <div class="service-icon mb-4" data-filter="coverings">
                             <i class="bi bi-tag"></i>
-                        </div> <!-- /.service-icon -->
-                        <p>COVERINGS</p>
-                    </div> <!-- /.service -->
+                        </div>
+                        <p><a href="#" class="hover" data-filter="coverings">COVERINGS</a></p>
+                    </div>
                 </div>
 
                 <div class="col-lg-3">
                     <div class="align-items-center d-flex justify-content-center">
-                        <div class="service-icon mb-4">
+                        <div class="service-icon mb-4" data-filter="accessories">
                             <i class="bi bi-sunglasses"></i>
-                        </div> <!-- /.service-icon -->
-                        <p>ACCESSORIES</p>
-                    </div> <!-- /.service -->
+                        </div>
+                        <p><a href="#" class="hover" data-filter="accessories">ACCESSORIES</a></p>
+                    </div>
                 </div>
 
                 <div class="col-lg-3">
                     <div class="align-items-center d-flex justify-content-center">
-                        <div class="service-icon mb-4">
+                        <div class="service-icon mb-4" data-filter="objects">
                             <i class="bi bi-gift"></i>
-                        </div> <!-- /.service-icon -->
-                        <p>OBJECTS</p>
-                    </div> <!-- /.service -->
+                        </div>
+                        <p><a href="#" class="hover" data-filter="objects">OBJECTS</a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
 
 
 
@@ -104,7 +112,7 @@
             <div class="row gy-5 justify-content-around">
                 <!-- Start Column 1 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#no cart yet" data-category="coverings">
                         <img src="gif/Hoodie.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">THICKER COVERING</h6>
                         <h6 class="product-price">$50.00</h6>
@@ -118,7 +126,7 @@
 
                 <!-- Start Column 2 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#no cart yet" data-category="coverings">
                         <img src="gif/Tshirt.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">TORSO COVERING</h6>
                         <h6 class="product-price">$78.00</h6>
@@ -132,7 +140,7 @@
 
                 <!-- Start Column 3 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#no cart yet" data-category="coverings">
                         <img src="gif/Beanie.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">HEAD COVERING</h6>
                         <h6 class="product-price">$43.00</h6>
@@ -146,7 +154,7 @@
 
                 <!-- Start Column 1 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#no cart yet" data-category="accessories">
                         <img src="gif/Tote.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">GREETINGS TOTE</h6>
                         <h6 class="product-price">$50.00</h6>
@@ -160,7 +168,7 @@
 
                 <!-- Start Column 2 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#no cart yet" data-category="accessories">
                         <img src="gif/Umbrella.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">PROBING STICK</h6>
                         <h6 class="product-price">$78.00</h6>
@@ -174,7 +182,7 @@
 
                 <!-- Start Column 3 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#no cart yet" data-category="accessories">
                         <img src="gif/Poncho.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">RAIN REPELLER</h6>
                         <h6 class="product-price">$43.00</h6>
@@ -188,7 +196,7 @@
 
                 <!-- Start Column 1 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#no cart yet" data-category="objects">
                         <img src="gif/Doormat.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">DIRT RECEPTACLE</h6>
                         <h6 class="product-price">$50.00</h6>
@@ -202,7 +210,7 @@
 
                 <!-- Start Column 2 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#no cart yet" data-category="objects">
                         <img src="gif/Frisbee.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">PERSONAL UFO</h6>
                         <h6 class="product-price">$78.00</h6>
@@ -216,7 +224,7 @@
 
                 <!-- Start Column 3 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#no cart yet" data-category="objects">
                         <img src="gif/Alien.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">ANGST RELIEVER</h6>
                         <h6 class="product-price">$43.00</h6>
@@ -232,48 +240,47 @@
         </div>
     </div>
     <!-- End Product Section -->
+
     <!-- footer -->
     <section class="footer">
-        <div class="overlay">
-            <!-- moving text section -->
-            <section class="moving-text-section text-color">
-                <div class="container-fluid">
-                    <div class="moving-text">
-                        <div class="moving-content">
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                        </div>
-                        <div class="moving-content">
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                        </div>
+        <!-- moving text section -->
+        <section class="moving-text-section text-color">
+            <div class="container-fluid">
+                <div class="moving-text">
+                    <div class="moving-content">
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                    </div>
+                    <div class="moving-content">
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
                     </div>
                 </div>
-            </section>
-            <div class="container-fluid py-5">
-                <div class="container py-5">
-                    <div class="footer-item">
-                        <img src="pics/Union.png" style="width: auto; height: 64px;" class="my-5">
-                        <p>⏁⊑⟟⌇ ⟟⌇ ⋏⍜⏁ ⍀⟒⏃⌰ ⏁⟒⌖⏁ ⟟ ⟊⎍⌇⏁ ⌿⎍⏁ ⌇⍜⋔⟒⏁⊑⟟⋏☌ ⍀⏃⋏⎅⍜⋔</p>
-                        <p class="mb-0"><a class="" href="#">created by EXTRATERRESTRIALS </a> © 2024 All Right
-                            Reserved.</p>
-                    </div>
+            </div>
+        </section>
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="footer-item">
+                    <img src="pics/Union.png" style="width: auto; height: 64px;" class="my-5">
+                    <p>⏁⊑⟟⌇ ⟟⌇ ⋏⍜⏁ ⍀⟒⏃⌰ ⏁⟒⌖⏁ ⟟ ⟊⎍⌇⏁ ⌿⎍⏁ ⌇⍜⋔⟒⏁⊑⟟⋏☌ ⍀⏃⋏⎅⍜⋔</p>
+                    <p class="mb-0"><a class="" href="#">created by EXTRATERRESTRIALS </a> © 2024 All Right
+                        Reserved.</p>
                 </div>
             </div>
         </div>

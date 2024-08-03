@@ -19,6 +19,7 @@
     --p-font-size: 18px;
     --btn-font-size: 14px;
     --text-xl: 200px;
+ 
 
     --border-radius-medium: 20px;
 
@@ -92,7 +93,7 @@ button {
 
 a {
     display: inline-block;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
@@ -104,6 +105,9 @@ strong {
 
 .text-xl {
     font-size: var(--text-xl);
+}
+.text-sm {
+    font-size: var(--text-sm) !important;
 }
 
 .text-color {
@@ -122,6 +126,10 @@ strong {
     z-index: 99;
 }
 
+.hover:hover {
+    color: var(--primary-color);
+    filter: invert(0.4);
+}
 /*------------------------
         sections
 ------------------------*/
@@ -223,6 +231,21 @@ strong {
 
 .hero-section-coverings {
     background: url('pics/Bodily-Coverings.jpg') center center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+    height: 90vh;
+    border-bottom: var(--primary-color);
+    border-bottom-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.hero-section-cart {
+    background: url('pics/cart.webp') center center/cover no-repeat;
     position: relative;
     overflow: hidden;
     padding-top: 100px;
@@ -600,8 +623,16 @@ strong {
     text-align: center;
 }
 
+.footer a {
+    color: var(--primary-color);
+}
 .overlay {
-    background: url(pics/background.png)
+    background: url(pics/background.png);
+        background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: none;
+    position: relative;
 }
 
 /*boxes fade*/
@@ -677,5 +708,8 @@ strong {
 @media (max-width: 425px) {
     .text-xl {
         font-size: 32vw;
+    }
+    :root {
+        --text-sm: 13px;
     }
 }
