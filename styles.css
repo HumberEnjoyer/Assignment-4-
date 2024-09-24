@@ -19,6 +19,7 @@
     --p-font-size: 18px;
     --btn-font-size: 14px;
     --text-xl: 200px;
+ 
 
     --border-radius-medium: 20px;
 
@@ -92,7 +93,7 @@ button {
 
 a {
     display: inline-block;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
@@ -104,6 +105,9 @@ strong {
 
 .text-xl {
     font-size: var(--text-xl);
+}
+.text-sm {
+    font-size: var(--text-sm) !important;
 }
 
 .text-color {
@@ -122,6 +126,10 @@ strong {
     z-index: 99;
 }
 
+.hover:hover {
+    color: var(--primary-color);
+    filter: invert(0.4);
+}
 /*------------------------
         sections
 ------------------------*/
@@ -199,7 +207,7 @@ strong {
 .hero-section {
     background: url('pics/header-bg.jpg') center center/cover no-repeat;
     height: 90vw;
-    max-height: 90vh;
+ 
     border-bottom: var(--primary-color);
     border-bottom-style: solid;
     color: var(--primary-color);
@@ -227,6 +235,21 @@ strong {
     overflow: hidden;
     padding-top: 100px;
     height: 90vh;
+    border-bottom: var(--primary-color);
+    border-bottom-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.hero-section-cart {
+    background: url('pics/cart1.webp') center center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+    height: 70vh;
     border-bottom: var(--primary-color);
     border-bottom-style: solid;
     display: flex;
@@ -600,8 +623,16 @@ strong {
     text-align: center;
 }
 
+.footer a {
+    color: var(--primary-color);
+}
 .overlay {
-    background: url(pics/background.png)
+    background: url(pics/background.png);
+        background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: none;
+    position: relative;
 }
 
 /*boxes fade*/
@@ -627,6 +658,39 @@ strong {
     opacity: 1;
     transform: translateY(0);
 }
+/****************** 
+        lightbox 
+**********************/
+.modal-content {
+    background-color: rgba(8, 31, 52, 0.95); /* Dark background with transparency */
+    border-radius: var(--border-radius-medium);
+    border: 2px solid hsla(82.5, 100%, 74.9%, 1); /* Neon green border */
+    box-shadow: 0 0 15px hsla(82.5, 100%, 74.9%, 1); /* Glowing effect */
+}
+
+.modal-header, .modal-body {
+    color: var(--primary-color); /* Neon green text */
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+
+.add-to-cart button {
+    background-color: hsla(82.5, 100%, 74.9%, 0.8); /* Neon green background */
+    border: none;
+    color: var(--dark-color); /* Dark text */
+    padding: 10px 20px;
+    font-size: var(--btn-font-size);
+    border-radius: var(--border-radius-medium);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-to-cart button:hover {
+    background-color: rgba(206, 255, 127, 0.479); /* Brighter neon green on hover */
+    transform: translateY(-3px); /* Lift button on hover */
+}
 
 /*************************** 
         Media queries 
@@ -634,6 +698,7 @@ strong {
 @media (min-width: 1500px) and (max-width: 2600px) {
     .hero-section {
         min-height: 1000px;
+        max-height: 90vh;
     }
 }
 
@@ -645,7 +710,10 @@ strong {
     .bottom-text {
         margin-top: 19vw;
     }
-
+    .hero-section {
+        min-height: 1000px;
+        max-height: 90vh;
+    }
 }
 
 @media (max-width: 977px) {
@@ -655,6 +723,9 @@ strong {
 
     .bottom-text {
         margin-top: 2vw;
+    }
+    .hero-section {
+        max-height: 90vh;
     }
 }
 
@@ -677,5 +748,8 @@ strong {
 @media (max-width: 425px) {
     .text-xl {
         font-size: 32vw;
+    }
+    :root {
+        --text-sm: 13px;
     }
 }

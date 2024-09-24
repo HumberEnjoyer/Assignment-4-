@@ -38,3 +38,35 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(element);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const filterLinks = document.querySelectorAll("[data-filter]");
+    let activeFilter = null;
+
+    filterLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            const filter = this.getAttribute("data-filter");
+
+            // Toggle active state
+            if (activeFilter === filter) {
+                activeFilter = null;
+                this.classList.remove("active");
+            } else {
+                activeFilter = filter;
+                filterLinks.forEach(link => link.classList.remove("active"));
+                this.classList.add("active");
+            }
+
+            // Filter items
+            const items = document.querySelectorAll(".product-item");
+            items.forEach(item => {
+                if (!activeFilter || item.getAttribute("data-category") === activeFilter) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+    });
+});

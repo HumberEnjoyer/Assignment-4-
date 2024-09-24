@@ -33,15 +33,15 @@
             <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav ms-auto position-absolute top-50 start-50 translate-middle">
                     <li class="nav-item">
-                        <a class="nav-link" href="spacecraft.html">Visit Spacecraft</a>
+                        <a class="nav-link text-sm" href="spacecraft.html">Visit Spacecraft</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="bodily-coverings.html">Bodily Coverings</a>
+                        <a class="nav-link text-sm" href="bodily-coverings.html">Bodily Coverings</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cart (0)</a>
+                        <a class="nav-link text-sm" href="cart.html">Cart (0)</a>
                     </li>
                 </ul>
             </div>
@@ -49,54 +49,59 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section-coverings">
-        <div class=" d-flex align-items-end justify-content-around align-self-end m-5">
-            <div class="text-start  ">
-                <h1 class="">BODILY</h1>
-                <h1 class="">COVERINGS</h1>
-            </div>
-
-            <div class="col-md-6 col-lg-3 text-start">
-                <p class="text-color">From our research, we understand that you express yourselves through your
-                    coverings. We hope you will express your excitement around our arrival with this collection.</p>
+    <section class="hero-section-coverings align-items-end">
+        <div class="container ">
+            <div class="row gy-5 justify-content-between align-items-end pb-5">
+                <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0 ">
+                    <h1 class="text-start">BODILY</h1>
+                    <h1 class="text-start">COVERINGS</h1>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0 ">
+                    <p class="text-color text-start">From our research, we understand that you express yourselves
+                        through
+                        your
+                        coverings. We hope you will express your excitement around our arrival with this
+                        collection.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- d-flex align-items-end justify-content-around align-self-end m-5 -->
+    <!-- filter section -->
     <section class="section-padding fade-up">
         <div class="container pt-5 product-line">
             <div class="row justify-content-center">
                 <div class="col-lg-3">
                     <div class="align-items-center d-flex justify-content-center">
-                        <div class="service-icon mb-4">
+                        <div class="service-icon mb-4" data-filter="coverings">
                             <i class="bi bi-tag"></i>
-                        </div> <!-- /.service-icon -->
-                        <p>COVERINGS</p>
-                    </div> <!-- /.service -->
+                        </div>
+                        <p><a href="#" class="hover" data-filter="coverings">COVERINGS</a></p>
+                    </div>
                 </div>
 
                 <div class="col-lg-3">
                     <div class="align-items-center d-flex justify-content-center">
-                        <div class="service-icon mb-4">
+                        <div class="service-icon mb-4" data-filter="accessories">
                             <i class="bi bi-sunglasses"></i>
-                        </div> <!-- /.service-icon -->
-                        <p>ACCESSORIES</p>
-                    </div> <!-- /.service -->
+                        </div>
+                        <p><a href="#" class="hover" data-filter="accessories">ACCESSORIES</a></p>
+                    </div>
                 </div>
 
                 <div class="col-lg-3">
                     <div class="align-items-center d-flex justify-content-center">
-                        <div class="service-icon mb-4">
+                        <div class="service-icon mb-4" data-filter="objects">
                             <i class="bi bi-gift"></i>
-                        </div> <!-- /.service-icon -->
-                        <p>OBJECTS</p>
-                    </div> <!-- /.service -->
+                        </div>
+                        <p><a href="#" class="hover" data-filter="objects">OBJECTS</a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-
 
     <!-- Start Product Section -->
     <div class="product-section section-padding">
@@ -104,10 +109,13 @@
             <div class="row gy-5 justify-content-around">
                 <!-- Start Column 1 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#" data-category="coverings" data-bs-toggle="modal"
+                        data-bs-target="#productModal" data-product="THICKER COVERING" data-price="$61.00"
+                        data-img="gif/Hoodie.gif"
+                        data-description="Not all humans believe in us, but we believe in you! The perfect item to share in our excitement that we all exist.">
                         <img src="gif/Hoodie.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">THICKER COVERING</h6>
-                        <h6 class="product-price">$50.00</h6>
+                        <h6 class="product-price">$61.00</h6>
 
                         <span class="buy-icon">
                             <img src="svg/noun-alien-bag-3249014.svg" class="img-fluid">
@@ -118,10 +126,13 @@
 
                 <!-- Start Column 2 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#" data-category="coverings" data-bs-toggle="modal"
+                        data-bs-target="#productModal" data-product="TORSO COVERING" data-price="$118.00"
+                        data-img="gif/Tshirt.gif"
+                        data-description="Wrap yourself in comfort with our TORSO COVERING, designed to celebrate the union of humans and extraterrestrials.">
                         <img src="gif/Tshirt.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">TORSO COVERING</h6>
-                        <h6 class="product-price">$78.00</h6>
+                        <h6 class="product-price">$118.00</h6>
 
                         <span class="buy-icon">
                             <img src="svg/noun-alien-bag-3249014.svg" class="img-fluid">
@@ -132,10 +143,13 @@
 
                 <!-- Start Column 3 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#" data-category="coverings" data-bs-toggle="modal"
+                        data-bs-target="#productModal" data-product="HEAD COVERING" data-price="$33.00"
+                        data-img="gif/Beanie.gif"
+                        data-description="Keep your thoughts warm and stylish with our HEAD COVERING, a perfect blend of human and alien fashion sense.">
                         <img src="gif/Beanie.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">HEAD COVERING</h6>
-                        <h6 class="product-price">$43.00</h6>
+                        <h6 class="product-price">$33.00</h6>
 
                         <span class="buy-icon">
                             <img src="svg/noun-alien-bag-3249014.svg" class="img-fluid">
@@ -146,10 +160,13 @@
 
                 <!-- Start Column 1 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#" data-category="accessories" data-bs-toggle="modal"
+                        data-bs-target="#productModal" data-product="GREETINGS TOTE" data-price="$56.00"
+                        data-img="gif/Tote.gif"
+                        data-description="Carry your essentials in style with the GREETINGS TOTE, a bag that speaks of our interstellar friendship.">
                         <img src="gif/Tote.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">GREETINGS TOTE</h6>
-                        <h6 class="product-price">$50.00</h6>
+                        <h6 class="product-price">$56.00</h6>
 
                         <span class="buy-icon">
                             <img src="svg/noun-alien-bag-3249014.svg" class="img-fluid">
@@ -160,10 +177,13 @@
 
                 <!-- Start Column 2 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#" data-category="accessories" data-bs-toggle="modal"
+                        data-bs-target="#productModal" data-product="PROBING STICK" data-price="$69.00"
+                        data-img="gif/Umbrella.gif"
+                        data-description="Stay dry and curious with the PROBING STICK, an umbrella that protects you while sparking intrigue.">
                         <img src="gif/Umbrella.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">PROBING STICK</h6>
-                        <h6 class="product-price">$78.00</h6>
+                        <h6 class="product-price">$69.00</h6>
 
                         <span class="buy-icon">
                             <img src="svg/noun-alien-bag-3249014.svg" class="img-fluid">
@@ -174,10 +194,13 @@
 
                 <!-- Start Column 3 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#" data-category="accessories" data-bs-toggle="modal"
+                        data-bs-target="#productModal" data-product="RAIN REPELLER" data-price="$48.00"
+                        data-img="gif/Poncho.gif"
+                        data-description="Embrace the rain with confidence wearing our RAIN REPELLER, designed to keep you dry and stylish.">
                         <img src="gif/Poncho.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">RAIN REPELLER</h6>
-                        <h6 class="product-price">$43.00</h6>
+                        <h6 class="product-price">$48.00</h6>
 
                         <span class="buy-icon">
                             <img src="svg/noun-alien-bag-3249014.svg" class="img-fluid">
@@ -188,10 +211,13 @@
 
                 <!-- Start Column 1 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#" data-category="objects" data-bs-toggle="modal"
+                        data-bs-target="#productModal" data-product="DIRT RECEPTACLE" data-price="$90.00"
+                        data-img="gif/Doormat.gif"
+                        data-description="Welcome your guests with the DIRT RECEPTACLE, a doormat that invites them to leave their earthly worries at the door.">
                         <img src="gif/Doormat.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">DIRT RECEPTACLE</h6>
-                        <h6 class="product-price">$50.00</h6>
+                        <h6 class="product-price">$90.00</h6>
 
                         <span class="buy-icon">
                             <img src="svg/noun-alien-bag-3249014.svg" class="img-fluid">
@@ -202,7 +228,10 @@
 
                 <!-- Start Column 2 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#" data-category="objects" data-bs-toggle="modal"
+                        data-bs-target="#productModal" data-product="PERSONAL UFO" data-price="$78.00"
+                        data-img="gif/Frisbee.gif"
+                        data-description="Take playtime to new heights with the PERSONAL UFO, a frisbee that's out of this world.">
                         <img src="gif/Frisbee.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">PERSONAL UFO</h6>
                         <h6 class="product-price">$78.00</h6>
@@ -216,7 +245,10 @@
 
                 <!-- Start Column 3 -->
                 <div class="col-12 col-md-4 col-lg-3 col-xl-4 mb-5 mb-md-0">
-                    <a class="product-item" href="#no cart yet">
+                    <a class="product-item" href="#" data-category="objects" data-bs-toggle="modal"
+                        data-bs-target="#productModal" data-product="ANGST RELIEVER" data-price="$43.00"
+                        data-img="gif/Alien.gif"
+                        data-description="Squeeze away your stress with the ANGST RELIEVER, a stress ball designed to bring peace and calm.">
                         <img src="gif/Alien.gif" class="img-fluid product-thumbnail">
                         <h6 class="product-title">ANGST RELIEVER</h6>
                         <h6 class="product-price">$43.00</h6>
@@ -227,53 +259,79 @@
                     </a>
                 </div>
                 <!-- End Column 3 -->
-
             </div>
         </div>
     </div>
     <!-- End Product Section -->
-    <!-- footer -->
-    <section class="footer">
-        <div class="overlay">
-            <!-- moving text section -->
-            <section class="moving-text-section text-color">
-                <div class="container-fluid">
-                    <div class="moving-text">
-                        <div class="moving-content">
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                        </div>
-                        <div class="moving-content">
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                            <span class="moving-item">🛸 WE COME IN PEACE</span>
-                        </div>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Product Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex">
+                    <div class="product-image">
+                        <img src="" alt="" class="img-fluid" id="productImage">
+                    </div>
+                    <div class="product-details ms-4">
+                        <h6 id="productPrice">$0.00</h6>
+                        <p id="productDescription"></p>
+                        <form class="add-to-cart">
+                            <input type="hidden" name="product" id="modalProductName">
+                            <input type="hidden" name="price" id="modalProductPrice">
+                            <input type="hidden" name="qty" value="1">
+                            <button type="submit" class="btn btn-primary">ADD TO CART</button>
+                        </form>
                     </div>
                 </div>
-            </section>
-            <div class="container-fluid py-5">
-                <div class="container py-5">
-                    <div class="footer-item">
-                        <img src="pics/Union.png" style="width: auto; height: 64px;" class="my-5">
-                        <p>⏁⊑⟟⌇ ⟟⌇ ⋏⍜⏁ ⍀⟒⏃⌰ ⏁⟒⌖⏁ ⟟ ⟊⎍⌇⏁ ⌿⎍⏁ ⌇⍜⋔⟒⏁⊑⟟⋏☌ ⍀⏃⋏⎅⍜⋔</p>
-                        <p class="mb-0"><a class="" href="#">created by EXTRATERRESTRIALS </a> © 2024 All Right
-                            Reserved.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <section class="footer">
+        <!-- moving text section -->
+        <section class="moving-text-section text-color">
+            <div class="container-fluid">
+                <div class="moving-text">
+                    <div class="moving-content">
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
                     </div>
+                    <div class="moving-content">
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                        <span class="moving-item">🛸 WE COME IN PEACE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="footer-item">
+                    <img src="pics/Union.png" style="width: auto; height: 64px;" class="my-5">
+                    <p>⏁⊑⟟⌇ ⟟⌇ ⋏⍜⏁ ⍀⟒⏃⌰ ⏁⟒⌖⏁ ⟟ ⟊⎍⌇⏁ ⌿⎍⏁ ⌇⍜⋔⟒⏁⊑⟟⋏☌ ⍀⏃⋏⎅⍜⋔</p>
+                    <p class="mb-0"><a class="" href="#">created by EXTRATERRESTRIALS </a> © 2024 All Right
+                        Reserved.</p>
                 </div>
             </div>
         </div>
@@ -289,6 +347,40 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript for lightbox functionality -->
+    <script>
+        const productModal = document.getElementById('productModal');
+        productModal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const productTitle = button.getAttribute('data-product');
+            const productPrice = button.getAttribute('data-price');
+            const productImg = button.getAttribute('data-img');
+            const productDescription = button.getAttribute('data-description');
+
+            const modalTitle = productModal.querySelector('.modal-title');
+            const modalPrice = productModal.querySelector('#productPrice');
+            const modalImage = productModal.querySelector('#productImage');
+            const modalDescription = productModal.querySelector('#productDescription');
+            const modalProductName = productModal.querySelector('#modalProductName');
+            const modalProductPrice = productModal.querySelector('#modalProductPrice');
+
+            modalTitle.textContent = productTitle;
+            modalPrice.textContent = productPrice;
+            modalImage.src = productImg;
+            modalDescription.textContent = productDescription;
+            modalProductName.value = productTitle;
+            modalProductPrice.value = productPrice.replace('$', ''); // removing $ for numeric operations
+        });
+    </script>
+
+    <script src="shoptest.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            updateCartCount(); // Update the cart count on page load
+        });
+    </script>
 
 </body>
 
